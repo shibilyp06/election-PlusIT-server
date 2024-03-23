@@ -1,7 +1,7 @@
 const mogoose = require("mongoose");
 
 module.exports = mogoose
-  .connect("mongodb://127.0.0.1:27017/ElectionDBS?")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("mongoosed connected");
   });
